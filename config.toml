@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "A minimal Hugo website"
+title = "Stay alive in hell Chosun"
 theme = "hugo-xmin"
 googleAnalytics = ""
 disqusShortname = ""
@@ -16,10 +16,10 @@ footnotereturnlinkcontents = "↩"
     name = "Home"
     url = "/"
     weight = 1
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
+#[[menu.main]]
+#    name = "About"
+#    url = "/about/"
+#    weight = 2
 [[menu.main]]
     name = "Categories"
     url = "/categories/"
@@ -33,5 +33,5 @@ footnotereturnlinkcontents = "↩"
     url = "/index.xml"
 
 [params]
-    description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+    description = "A personal web for anarinsk"
+    footer = "&copy; [anarinsk](https://stayaliveinhellchosun) 2017 | [Github](https://github.com/anarinsk)"
