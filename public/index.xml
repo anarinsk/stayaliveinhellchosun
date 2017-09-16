@@ -261,109 +261,13 @@ Figure 1: A fancy pie chart.
     </item>
     
     <item>
-      <title>About Hugo XMin</title>
+      <title>Stay Alive in Hell Chosun</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;XMin&lt;/strong&gt; is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the  &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal. In fact, this theme does not contain any JavaScript code at all, although on this example website I did introduce some JavaScript code (still relatively simple anyway). The theme does not contain any images, either, and is pretty much a plain-text theme.&lt;/p&gt;
-
-&lt;p&gt;The theme name &amp;ldquo;XMin&amp;rdquo; can be interpreted as &amp;ldquo;&lt;strong&gt;X&lt;/strong&gt;ie&amp;rsquo;s &lt;strong&gt;Min&lt;/strong&gt;imal theme&amp;rdquo; (Xie is my last name) or &amp;ldquo;e&lt;strong&gt;X&lt;/strong&gt;tremely &lt;strong&gt;Min&lt;/strong&gt;imal theme&amp;rdquo;.&lt;/p&gt;
-
-&lt;h1 id=&#34;config-toml&#34;&gt;config.toml&lt;/h1&gt;
-
-&lt;p&gt;For this example site, I defined permalinks for two sections, &lt;code&gt;post&lt;/code&gt; and &lt;code&gt;note&lt;/code&gt;, so that the links to pages under these directories will contain the date info, e.g., &lt;code&gt;https://xmin.yihui.name/post/2016/02/14/a-plain-markdown-post/&lt;/code&gt;. This is optional, and it is up to your personal taste of URLs.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[permalinks]
-    post = &amp;quot;/post/:year/:month/:day/:slug/&amp;quot;
-    note = &amp;quot;/note/:year/:month/:day/:slug/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can define the menu through &lt;code&gt;menu.main&lt;/code&gt;, e.g.,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[[menu.main]]
-    name = &amp;quot;Home&amp;quot;
-    url = &amp;quot;/&amp;quot;
-    weight = 1
-[[menu.main]]
-    name = &amp;quot;About&amp;quot;
-    url = &amp;quot;/about/&amp;quot;
-    weight = 2
-[[menu.main]]
-    name = &amp;quot;Categories&amp;quot;
-    url = &amp;quot;/categories/&amp;quot;
-    weight = 3
-[[menu.main]]
-    name = &amp;quot;Tags&amp;quot;
-    url = &amp;quot;/tags/&amp;quot;
-    weight = 4
-[[menu.main]]
-    name = &amp;quot;Subscribe&amp;quot;
-    url = &amp;quot;/index.xml&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Alternatively, you can add &lt;code&gt;menu: main&lt;/code&gt; to the YAML metadata of any of your pages, so that these pages will appear in the menu.&lt;/p&gt;
-
-&lt;p&gt;The page footer can be defined in &lt;code&gt;.Params.footer&lt;/code&gt;, and the text is treated as Markdown, e.g.,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[params]
-    footer = &amp;quot;&amp;amp;copy; [Yihui Xie](https://yihui.name) 2017&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;custom-layouts&#34;&gt;Custom layouts&lt;/h1&gt;
-
-&lt;p&gt;There are two layout files under &lt;code&gt;layouts/partials/&lt;/code&gt; that you may want to override: &lt;code&gt;head_custom.html&lt;/code&gt; and &lt;code&gt;foot_custom.html&lt;/code&gt;. This is how you inject arbitrary HTML code to the head and foot areas. For example, this site has a file &lt;code&gt;layouts/partials/foot_custom.html&lt;/code&gt; to support LaTeX math via MathJax and center images automatically:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;//yihui.name/js/math-code.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script async src=&amp;quot;//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;
-&amp;lt;/script&amp;gt;
-
-&amp;lt;script async src=&amp;quot;//yihui.name/js/center-img.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can certainly enable highlight.js for syntax highlighting by yourself through &lt;code&gt;head_custom.html&lt;/code&gt; and &lt;code&gt;foot_custom.html&lt;/code&gt; if you want.&lt;/p&gt;
-
-&lt;p&gt;If you do not like the default fonts (e.g., &lt;code&gt;Palatino&lt;/code&gt;), you may provide your own &lt;code&gt;static/css/fonts.css&lt;/code&gt; under the root directory of your website to override the &lt;code&gt;fonts.css&lt;/code&gt; in the theme.&lt;/p&gt;
-
-&lt;h1 id=&#34;other-features&#34;&gt;Other features&lt;/h1&gt;
-
-&lt;p&gt;I could have added more features to this theme, but I decided not to, since I have no intention to make this theme feature-rich. However, I will teach you how. I have prepared several examples via pull requests at &lt;a href=&#34;https://github.com/yihui/hugo-xmin/pulls&#34;&gt;https://github.com/yihui/hugo-xmin/pulls&lt;/a&gt;, so that you can see the implementations of these features when you check out the diffs in the pull requests. For example, you can:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/yihui/hugo-xmin/pull/3&#34;&gt;Enable Google Analytics&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/yihui/hugo-xmin/pull/4&#34;&gt;Enable Disqus comments&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/yihui/hugo-xmin/pull/5&#34;&gt;Enable highlight.js for syntax highlighting of code blocks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/yihui/hugo-xmin/pull/2&#34;&gt;Display categories and tags on a page&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/yihui/hugo-xmin/pull/7&#34;&gt;Add a table of contents&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/yihui/hugo-xmin/pull/6&#34;&gt;Add a link in the footer of each page to &amp;ldquo;Edit this page&amp;rdquo; on Github&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To fully understand these examples, you have to read &lt;a href=&#34;https://bookdown.org/yihui/blogdown/templates.html&#34;&gt;the section on Hugo templates&lt;/a&gt; in the &lt;strong&gt;blogdown&lt;/strong&gt; book.&lt;/p&gt;
-
-&lt;h1 id=&#34;design-philosophy&#34;&gt;Design philosophy&lt;/h1&gt;
-
-&lt;p&gt;Lastly, a few words about my design philosophy for this theme: I have been relying on existing frameworks like Bootstrap for years since I&amp;rsquo;m not really a designer, and I was always scared by the complexity of CSS.&lt;/p&gt;
-
-&lt;p&gt;When I started writing this theme, I asked myself, &amp;ldquo;&lt;em&gt;What if I just write from scratch?&lt;/em&gt;&amp;rdquo; No Bootstrap. No Normalize.css. I don&amp;rsquo;t care about IE (life could be so much easier without IE) or inconsistencies among browsers (for personal websites). As long as the theme looks okay in Chrome, Firefox, and Safari, I&amp;rsquo;m done. Thanks to the simplicity of Markdown, you cannot really produce very complicated HTML, and I think styling the HTML output from Markdown is much simpler than general HTML documents. For example, I do not need to care much about form elements like textareas or buttons.&lt;/p&gt;
-
-&lt;p&gt;After I finished this theme, I started to wonder why I&amp;rsquo;d need &lt;code&gt;normalize.css&lt;/code&gt; at all (it sounds like a religious belief). The default appearance of modern browsers actually looks pretty good in my eyes, after I tweak the typeface a little bit.&lt;/p&gt;
-
-&lt;p&gt;Compared to inconsistencies across browsers, I care much more about these properties of HTML elements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tables should always be centered, and striped tables are easier to read especially when they are wide. Tables should not have vertical borders.&lt;/li&gt;
-&lt;li&gt;An image should be centered if it is the only child element of a paragraph.&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;max-width&lt;/code&gt; of images, videos, and iframes should be &lt;code&gt;100%&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I hope you can enjoy this theme. The source code is &lt;a href=&#34;https://github.com/yihui/hugo-xmin&#34;&gt;on Github&lt;/a&gt;. Happy hacking!&lt;/p&gt;
+      <description>&lt;p&gt;This is personal web place for anarinsk as one of air-breathing to stay alive in hell Chosun! 헬조선에서 잘 살아 남자!
+This is built by Blogdown and hugo-xmin, code is &lt;a href=&#34;https://github.com/yihui/hugo-xmin&#34;&gt;on Github&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
